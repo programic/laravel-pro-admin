@@ -42,13 +42,11 @@ class ProAdminServiceProvider extends ServiceProvider
 //                ');
 //            }
             
-            $manifest = json_decode(file_get_contents(
-                __DIR__ . '/../dist/manifest.json'
-            ), true);
+//            $manifest = json_decode(file_get_contents(
+//                __DIR__ . '/../dist/manifest.json'
+//            ), true);
 
 
-            return 'poep';
-            return new HtmlString(`poep`);
 //            dd($manifest);
             return new HtmlString(`
                 <script type="module" src="/build/{$manifest['index.html']['file']}"></script>

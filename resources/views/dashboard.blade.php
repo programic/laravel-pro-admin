@@ -13,10 +13,7 @@
     </script>
 
     @php
-        $manifest = json_decode(file_get_contents(
-            '/var/laravel-pro-admin/dist/manifest.json'
-        ), true);
-
+        $manifest = json_decode(file_get_contents(__DIR__ . '/../../dist/manifest.json'), true);
     @endphp
 
     <script type="module" src="/vendor/pro-admin/{{ $manifest['index.html']['file'] }}"></script>
