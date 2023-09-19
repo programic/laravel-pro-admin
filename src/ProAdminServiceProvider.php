@@ -62,7 +62,7 @@ class ProAdminServiceProvider extends ServiceProvider
     public function defineAssetPublishing(): void
     {
         $this->publishes([
-            PRO_ADMIN_PATH . '/public' => public_path('vendor/pro-admin'),
+            PRO_ADMIN_PATH . '/dist' => public_path('vendor/pro-admin'),
         ], ['pro-admin-assets', 'laravel-assets']);
     }
 
