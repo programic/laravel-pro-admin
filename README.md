@@ -13,7 +13,20 @@ This package requires PHP 5.6 and Laravel 5.0 or higher.
 composer require programic/laravel-pro-admin
 ```
 
+Publish vendor assets 
+
+```
+php artisan vendor:publish --provider="Programic\ProAdmin\ProAdminServiceProvider"
+```
+
+Install dashboard
+
+```
+php artisan pro-admin:install
+```
 ## Usage
+
+Make sure all the construct bindings in the notifications are typed. In the  
 
 
 ## Testing

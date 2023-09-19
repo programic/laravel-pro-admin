@@ -131,8 +131,7 @@ class NotificationsController extends Controller
                             dd('end');
                         }
                     } catch (\Throwable $e) {
-                        dd($parameterReflection);
-//                        throw new \Exception($e->getMessage() . ' ')
+                        throw new \Exception('could not find binding for ' . $parameterReflection->getFileName() . ' in class ' . $class->getFileName());
                     }
                 }
             }

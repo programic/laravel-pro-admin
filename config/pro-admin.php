@@ -40,11 +40,29 @@ return [
 
     'appName' => '',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Notification bindings by type
+    |--------------------------------------------------------------------------
+    |
+    | Specify the type bindings to a specific value
+    |
+    */
+
     'bindings' => [
-        
+//        'App\Models\User' => function () { return 1; },
     ],
 
-    'namings' => [
+    /*
+    |--------------------------------------------------------------------------
+    | Notification bindings by type
+    |--------------------------------------------------------------------------
+    |
+    | Specify the named bindings to a specific value
+    |
+    */
 
+    'namings' => [
+//        'user' => function () { return 'user'; },
     ],
 ];
