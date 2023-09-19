@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\Facades\Gate;
+use Programic\ProAdmin\ProAdmin;
+use Programic\ProAdmin\ProAdminApplicationServiceProvider;
+
+class ProAdminServiceProvider extends ProAdminApplicationServiceProvider
+{
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        parent::boot();
+
+        // ProAdmin::routeSmsNotificationsTo('15556667777');
+        // ProAdmin::routeMailNotificationsTo('example@example.com');
+        // ProAdmin::routeSlackNotificationsTo('slack-webhook-url', '#channel');
+
+        // ProAdmin::night();
+    }
+
+    /**
+     * Register the ProAdmin gate.
+     *
+     * This gate determines who can access Pro-admin in non-local environments.
+     *
+     * @return void
+     */
+    protected function gate()
+    {
+        Gate::define('access', function ($user) {
+            return $user->isAdmin();
+        });
+    }
+}
